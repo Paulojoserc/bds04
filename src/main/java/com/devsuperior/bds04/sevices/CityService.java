@@ -17,7 +17,7 @@ public class CityService {
 
 	@Autowired
 	private CityRepository repository;
-	
+	@Transactional
 	public List<CityDTO> findAll() {
 		List<City> list = repository.findAll(Sort.by("name"));
 		return list.stream().map(x -> new CityDTO(x)).collect(Collectors.toList());

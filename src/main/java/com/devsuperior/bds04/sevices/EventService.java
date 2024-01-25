@@ -17,10 +17,11 @@ public class EventService {
 	@Autowired
 	private EventRepository repository;
 	
-	@Transactional(readOnly = true)
+	@Transactional
 	public Page<EventDTO> findAll(Pageable pageable) {
 		Page<Event> page = repository.findAll(pageable);
 		return page.map(x -> new EventDTO(x));
+		
 	}
 
 	@Transactional

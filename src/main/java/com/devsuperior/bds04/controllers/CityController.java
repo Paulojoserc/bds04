@@ -26,8 +26,8 @@ public class CityController {
 	
 	@GetMapping
 	public ResponseEntity<List<CityDTO>> findAll() {
-		List<CityDTO> list = service.findAll();		
-		return ResponseEntity.ok().body(list);
+		List<CityDTO> dto = service.findAll();		
+		return ResponseEntity.ok().body(dto);
 	}
 	
 	@PostMapping

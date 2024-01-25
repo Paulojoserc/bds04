@@ -14,7 +14,7 @@ import com.devsuperior.bds04.repositories.UserRepository;
 @Service
 public class UserService implements UserDetailsService {
 	
-	private static Logger Logger = LoggerFactory.getLogger(UserService.class);
+	private  Logger Logger = LoggerFactory.getLogger(UserService.class);
 	
 	@Autowired
 	private UserRepository repository;
